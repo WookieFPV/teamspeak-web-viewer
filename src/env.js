@@ -8,6 +8,11 @@ export const env = createEnv({
    */
   server: {
     NODE_ENV: z.enum(["development", "test", "production"]),
+    TS3_HOST: z.string(),
+    TS3_PASSWORD: z.string(),
+    TS3_NICKNAME: z.string().optional(),
+    TS3_USERNAME: z.string(),
+    TS3_USER_CID: z.string().optional(),
   },
 
   /**
@@ -25,7 +30,11 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
-    // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
+    TS3_HOST: process.env.TS3_HOST,
+    TS3_PASSWORD: process.env.TS3_PASSWORD,
+    TS3_NICKNAME: process.env.TS3_NICKNAME,
+    TS3_USERNAME: process.env.TS3_USERNAME,
+    TS3_USER_CID: process.env.TS3_USER_CID,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
