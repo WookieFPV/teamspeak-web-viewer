@@ -4,7 +4,7 @@ import { TeamspeakUi } from "~/components/tsComponents";
 const isDebug = false;
 export const TsLoaderUi = () => {
   const clients = api.ts3.clients.useQuery(undefined, {
-    refetchInterval: 1 * 1000,
+    refetchInterval: 1.5 * 1000,
   });
   const channels = api.ts3.channel.useQuery(undefined, { staleTime: Infinity });
 
@@ -21,7 +21,7 @@ export const TsLoaderUi = () => {
   const filteredClients = clients.data?.filter((cl) => cl.type !== 0);
 
   return (
-    <div className="space-y-2 bg-[#23272A] p-4 text-white">
+    <div className="space-y-1 bg-[#23272A] p-4 text-white">
       <TeamspeakUi channels={channels.data} clients={filteredClients} />
     </div>
   );

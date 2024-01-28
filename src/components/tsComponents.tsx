@@ -23,10 +23,6 @@ export const TeamspeakUi = ({
   ));
 };
 
-/**
- * The current implementation of TsChannel doesn't cover edge cases and only works in a 2 level deep structure.
- * My Teamspeak is using such a structure but this should be reworked to a recursive Component
- */
 export const TsChannel = ({
   channel,
   channels,
@@ -39,6 +35,7 @@ export const TsChannel = ({
   const clientName: string = channel.channelName;
   const isSpacer =
     clientName.includes("[cspacer") || clientName.includes("[*spacer");
+  const hasChildren = channels.some((ch) => ch.pid === channel.cid);
   const cleanedName = clientName
     .replace("[cspacer]", "")
     .replace("[*spacer1]", "")
@@ -47,29 +44,30 @@ export const TsChannel = ({
 
   return (
     <>
-      <div className="flex items-center justify-between">
+      <div className="mt-0 flex">
         <div className="flex items-center">
-          {isSpacer ? null : <ChevronDownIcon className="mr-2 text-red-600" />}
+          {isSpacer ? null : hasChildren ? (
+            <ChevronDownIcon className="mr-2 text-red-600" />
+          ) : (
+            <ChevronRightIcon className="ml-3 mr-2 text-green-500" />
+          )}
           <span className="font-bold">{cleanedName}</span>
         </div>
       </div>
+      {clients
+        .filter((cl) => cl.cid === channel.cid)
+        .map((cl) => (
+          <TsUser key={cl.clid} client={cl} />
+        ))}
       {channels
         .filter((c) => c.pid === channel.cid)
         .map((subCh) => (
-          <>
-            <div
-              key={subCh.cid}
-              className="mb-1 ml-5 flex flex-row items-center"
-            >
-              <ChevronRightIcon className="mr-2 text-green-500" />
-              <span>{subCh.channelName}</span>
-            </div>
-            {clients
-              .filter((cl) => cl.cid === subCh.cid)
-              .map((cl) => (
-                <TsUser key={cl.clid} client={cl} />
-              ))}
-          </>
+          <TsChannel
+            key={subCh.cid}
+            channel={subCh}
+            channels={channels}
+            clients={clients}
+          />
         ))}
     </>
   );
