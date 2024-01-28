@@ -7,7 +7,7 @@ export const TsUser = ({ client }: { client: ClientEntry }) => {
   return (
     <div className="ml-10 flex items-center">
       <TsUserIcon client={client} />
-      <span>{client.clientNickname + idleText}</span>
+      <span className={"font-sans"}>{client.clientNickname + idleText}</span>
     </div>
   );
 };

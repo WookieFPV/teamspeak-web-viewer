@@ -51,7 +51,7 @@ export const TsChannel = ({
           ) : (
             <ChevronRightIcon className="ml-3 mr-2 text-green-500" />
           )}
-          <span className="font-bold">{cleanedName}</span>
+          <span className="font-sans ">{cleanedName}</span>
         </div>
       </div>
       {clients
