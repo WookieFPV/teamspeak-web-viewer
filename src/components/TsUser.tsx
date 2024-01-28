@@ -2,10 +2,12 @@ import { CircleIcon, MicMute, SoundMute } from "~/components/tsIcons";
 import { type ClientEntry } from "ts3-nodejs-library/lib/types/ResponseTypes";
 
 export const TsUser = ({ client }: { client: ClientEntry }) => {
+  const idleTimeMins = Math.floor(client.clientIdleTime / 1000 / 60);
+  const idleText = idleTimeMins > 5 ? `  [${idleTimeMins}min idle]` : "";
   return (
     <div className="mb-1 ml-10 flex items-center">
       <TsUserIcon client={client} />
-      <span>{client.clientNickname}</span>
+      <span>{client.clientNickname + idleText}</span>
     </div>
   );
 };
