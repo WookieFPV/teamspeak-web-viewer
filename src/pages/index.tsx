@@ -16,13 +16,15 @@ export const TsLoaderUi = () => {
 
   if (!channels.data || !clients.data)
     return (
-      <div className="w-[300px] bg-[#23272A] p-4 text-white">Loading...</div>
+      <div className="min min-h-screen space-y-1 bg-[#23272A] p-4 text-white">
+        Loading...
+      </div>
     );
 
   const filteredClients = clients.data?.filter((cl) => cl.type !== 0);
 
   return (
-    <div className="space-y-1 bg-[#23272A] p-4 text-white">
+    <div className="min min-h-screen space-y-1 bg-[#23272A] p-4 text-white">
       <LastDataView dataUpdatedAt={clients.dataUpdatedAt} />
       <TeamspeakUi channels={channels.data} clients={filteredClients} />
     </div>

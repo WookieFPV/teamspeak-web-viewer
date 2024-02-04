@@ -5,14 +5,14 @@ import { useState } from "react";
 const minTimeDiffToShow = 30;
 
 export const LastDataView = ({ dataUpdatedAt }: { dataUpdatedAt: number }) => {
-  const [diff, setDiff] = useState<number>(() => Date.now());
+  const [diff, setDiff] = useState<number>(0);
 
-  //useInterval(() => setDate(Date.now()), 1000);
   useInterval(
     () => setDiff(Math.max(Math.floor((Date.now() - dataUpdatedAt) / 1000), 0)),
     1000,
   );
   if (diff < minTimeDiffToShow) return null;
 
+  console.log(JSON.stringify({ diff, dataUpdatedAt }));
   return <p className={"mb-3 text-red-500"}>{`last update: ${diff}s !`}</p>;
 };
