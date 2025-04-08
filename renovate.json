@@ -19,9 +19,10 @@
   "prConcurrentLimit": 16,
   "rangeStrategy": "pin",
   "separateMinorPatch": true,
-  "semanticCommits": true,
-  "semanticPrefix": "chore",
-  "stabilityDays": 3,
+  "semanticCommits": "enabled",
+  "semanticCommitType": "chore",
+  "semanticCommitScope": null,
+  "minimumReleaseAge": "3 days",
   "vulnerabilityAlerts": {
     "labels": ["security"],
     "automerge": false
