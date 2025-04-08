@@ -9,6 +9,11 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    env:
+      TS3_HOST: ${{ secrets.TS3_HOST }}
+      TS3_PASSWORD: ${{ secrets.TS3_PASSWORD }}
+      TS3_NICKNAME: ${{ secrets.TS3_NICKNAME }}
+      TS3_USERNAME: ${{ secrets.TS3_USERNAME }}
 
     steps:
       - uses: actions/checkout@v4
