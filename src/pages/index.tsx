@@ -6,8 +6,11 @@ const isDebug = false;
 export const TsLoaderUi = () => {
   const clients = api.ts3.clients.useQuery(undefined, {
     refetchInterval: 5 * 1000,
+    gcTime: 60 * 60 * 1000,
+    staleTime: 5 * 60 * 1000,
+    refetchIntervalInBackground: true
   });
-  const channels = api.ts3.channel.useQuery(undefined, { staleTime: Infinity });
+  const channels = api.ts3.channel.useQuery(undefined, {staleTime: Infinity, gcTime: Infinity});
 
   if (isDebug) {
     console.log(JSON.stringify(clients.data));
