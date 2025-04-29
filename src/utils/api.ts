@@ -51,7 +51,7 @@ export const api = createTRPCNext<AppRouter>({
    *
    * @see https://trpc.io/docs/data-transformers
    */
-  transformer: superjson
+  transformer: superjson,
 });
 
 /**
