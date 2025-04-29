@@ -6,7 +6,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --turbopack",
-    "check": "biome check .",
+    "lint": "biome check .",
     "check:unsafe": "biome check --write --unsafe .",
     "check:write": "biome check --write .",
     "typecheck": "tsc --noEmit",
@@ -36,8 +36,7 @@
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
     "postcss": "8.5.3",
-    "prettier": "3.5.3",
-    "prettier-plugin-tailwindcss": "0.6.11",
+
     "tailwindcss": "4.1.4",
     "typescript": "5.8.3"
   },
