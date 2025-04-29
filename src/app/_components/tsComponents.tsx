@@ -2,7 +2,7 @@ import type {
   ChannelEntry,
   ClientEntry,
 } from "ts3-nodejs-library/lib/types/ResponseTypes";
-import { TsChannel } from "~/components/TsChannel";
+import { TsChannel } from "~/app/_components/TsChannel";
 
 export const TeamspeakUi = ({
   channels,

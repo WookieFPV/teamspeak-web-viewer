@@ -1,20 +1,29 @@
-import { LastDataView } from "~/components/lastDataView";
-import { TeamspeakUi } from "~/components/tsComponents";
-import { api } from "~/utils/api";
+"use client";
+import { useQuery } from "@tanstack/react-query";
+import { LastDataView } from "~/app/_components/lastDataView";
+import { TeamspeakUi } from "~/app/_components/tsComponents";
+import { useTRPC } from "~/utils/trpc";
 
 const isDebug = false;
 
 export const TsLoaderUi = () => {
-  const clients = api.ts3.clients.useQuery(undefined, {
-    refetchInterval: 5 * 1000,
-    gcTime: 60 * 60 * 1000,
-    staleTime: 5 * 60 * 1000,
-    refetchIntervalInBackground: true,
-  });
-  const channels = api.ts3.channel.useQuery(undefined, {
-    staleTime: Number.POSITIVE_INFINITY,
-    gcTime: Number.POSITIVE_INFINITY,
-  });
+  const trpc = useTRPC();
+
+  const clients = useQuery(
+    trpc.ts3.clients.queryOptions(undefined, {
+      refetchInterval: 5 * 1000,
+      gcTime: 60 * 60 * 1000,
+      staleTime: 5 * 1000,
+      refetchIntervalInBackground: true,
+    }),
+  );
+
+  const channels = useQuery(
+    trpc.ts3.channel.queryOptions(undefined, {
+      staleTime: Number.POSITIVE_INFINITY,
+      gcTime: Number.POSITIVE_INFINITY,
+    }),
+  );
 
   if (isDebug) {
     console.log(JSON.stringify(clients.data));

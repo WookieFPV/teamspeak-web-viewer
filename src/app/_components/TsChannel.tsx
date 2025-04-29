@@ -1,10 +1,11 @@
+"use client";
 import { useState } from "react";
 import type {
   ChannelEntry,
   ClientEntry,
 } from "ts3-nodejs-library/lib/types/ResponseTypes";
-import { TsUser } from "~/components/TsUser";
-import { ChevronDownIcon, ChevronRightIcon } from "~/components/tsIcons";
+import { TsUser } from "~/app/_components/TsUser";
+import { ChevronDownIcon, ChevronRightIcon } from "~/app/_components/tsIcons";
 
 export const TsChannel = ({
   channel,

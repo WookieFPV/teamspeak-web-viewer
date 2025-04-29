@@ -11,7 +11,7 @@ export const ts3Router = createTRPCRouter({
     const ts = await getTs();
     if (!ts) throw Error("ts connection error");
     const clients = (await getClients(ts)) as unknown as ClientEntry[];
-    console.log(clients.map((c) => c.nickname));
+    // console.log(clients.map((c) => c.nickname));
     return clients;
   }),
   channel: publicProcedure.query(async () => {
@@ -19,7 +19,7 @@ export const ts3Router = createTRPCRouter({
     const ts = await getTs();
     if (!ts) throw Error("ts connection error");
     const channel = (await ts.channelList()) as unknown as ChannelEntry[];
-    console.log(channel.map((c) => c.name));
+    // console.log(channel.map((c) => c.name));
     return channel;
   }),
   /*

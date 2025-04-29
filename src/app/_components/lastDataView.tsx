@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { useInterval } from "usehooks-ts";
 
@@ -13,6 +14,9 @@ export const LastDataView = ({ dataUpdatedAt }: { dataUpdatedAt: number }) => {
   );
   if (diff < minTimeDiffToShow) return null;
 
-  console.log(JSON.stringify({ diff, dataUpdatedAt }));
-  return <p className={"mb-3 text-red-500"}>{`last update: ${diff}s !`}</p>;
+  return (
+    <div className="absolute top-0 left-0 z-[1000]">
+      <p className={"mb-3 text-red-500"}>{`last update: ${diff}s !`}</p>
+    </div>
+  );
 };
