@@ -1,6 +1,6 @@
+import { wait } from "next/dist/lib/wait";
 import { QueryProtocol, TeamSpeak } from "ts3-nodejs-library";
 import { env } from "~/env";
-import { wait } from "next/dist/lib/wait";
 
 export const tsConnect = async () => {
   console.log(`ts connect (${env.TS3_HOST})`);
@@ -19,7 +19,6 @@ export const tsConnect = async () => {
     //an error occurred during connecting
     throw e;
   });
-  // eslint-disable-next-line @typescript-eslint/no-misused-promises
   ts.on("close", async (error): Promise<void> => {
     console.log("disconnected, trying to reconnect...");
     await ts.reconnect(-1, 3000);

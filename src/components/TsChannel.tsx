@@ -1,10 +1,10 @@
+import { useState } from "react";
 import type {
   ChannelEntry,
   ClientEntry,
 } from "ts3-nodejs-library/lib/types/ResponseTypes";
-import { ChevronDownIcon, ChevronRightIcon } from "~/components/tsIcons";
 import { TsUser } from "~/components/TsUser";
-import { useState } from "react";
+import { ChevronDownIcon, ChevronRightIcon } from "~/components/tsIcons";
 
 export const TsChannel = ({
   channel,
@@ -24,6 +24,7 @@ export const TsChannel = ({
     <>
       <button
         className="mt-0 flex"
+        type={"button"}
         onClick={() => setIsCollapsed((old) => !old)}
       >
         <div className="flex items-center">

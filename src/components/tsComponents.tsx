@@ -1,6 +1,6 @@
-import {
-  type ChannelEntry,
-  type ClientEntry,
+import type {
+  ChannelEntry,
+  ClientEntry,
 } from "ts3-nodejs-library/lib/types/ResponseTypes";
 import { TsChannel } from "~/components/TsChannel";
 

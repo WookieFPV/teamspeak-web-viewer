@@ -1,9 +1,9 @@
+import type {
+  ChannelEntry,
+  ClientEntry,
+} from "ts3-nodejs-library/lib/types/ResponseTypes";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 import { getClients, getTs } from "~/teamspeak/ts3";
-import {
-  type ChannelEntry,
-  type ClientEntry,
-} from "ts3-nodejs-library/lib/types/ResponseTypes";
 
 export const ts3Router = createTRPCRouter({
   clients: publicProcedure.query(async () => {

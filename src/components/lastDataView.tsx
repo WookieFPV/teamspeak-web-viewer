@@ -1,5 +1,5 @@
-import { useInterval } from "usehooks-ts";
 import { useState } from "react";
+import { useInterval } from "usehooks-ts";
 
 // min Time to show the Out of sync warning in [s]
 const minTimeDiffToShow = 30;

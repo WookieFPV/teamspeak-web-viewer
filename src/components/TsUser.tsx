@@ -1,5 +1,5 @@
+import type { ClientEntry } from "ts3-nodejs-library/lib/types/ResponseTypes";
 import { CircleIcon, MicMute, SoundMute } from "~/components/tsIcons";
-import { type ClientEntry } from "ts3-nodejs-library/lib/types/ResponseTypes";
 
 export const TsUser = ({ client }: { client: ClientEntry }) => {
   const idleTimeMins = Math.floor(client.clientIdleTime / 1000 / 60);
