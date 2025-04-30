@@ -3,16 +3,21 @@ import { useState } from "react";
 import { useInterval } from "usehooks-ts";
 
 // min Time to show the Out of sync warning in [s]
-const minTimeDiffToShow = 30;
+const minTimeDiffToShow = 120;
 
 export const LastDataView = ({ dataUpdatedAt }: { dataUpdatedAt: number }) => {
   const [diff, setDiff] = useState<number>(0);
 
-  useInterval(
-    () => setDiff(Math.max(Math.floor((Date.now() - dataUpdatedAt) / 1000), 0)),
-    1000,
-  );
-  if (diff < minTimeDiffToShow) return null;
+  useInterval(() => {
+    const diffTime = Math.floor((Date.now() - dataUpdatedAt) / 1000);
+    if (diffTime < minTimeDiffToShow) {
+      setDiff(0);
+    } else {
+      setDiff(diffTime);
+    }
+  }, 1000);
+
+  if (!diff) return null;
 
   return (
     <div className="absolute top-0 left-0 z-[1000]">
