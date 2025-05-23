@@ -3,15 +3,18 @@ import { useQuery } from "@tanstack/react-query";
 import type { ClientEntry } from "ts3-nodejs-library/lib/types/ResponseTypes";
 import { LastDataView } from "~/app/_components/lastDataView";
 import { TeamspeakUi } from "~/app/_components/tsComponents";
+import { useRefetchInterval } from "~/app/useRefetchInterval";
 import { useTRPC } from "~/utils/trpc";
 
 export const TsLoaderUi = () => {
   const trpc = useTRPC();
+  const refetchInterval = useRefetchInterval();
 
   const clients = useQuery(
     trpc.ts3.clients.queryOptions(undefined, {
-      refetchInterval: 5 * 1000,
-      gcTime: 60 * 60 * 1000,
+      refetchInterval,
+      refetchIntervalInBackground: true,
+      gcTime: 60 * 60 * 1000, // 1 hour
       staleTime: 15 * 1000,
       placeholderData: [] as ClientEntry[],
       select: (clients) => clients.filter((cl) => cl.type !== 0),

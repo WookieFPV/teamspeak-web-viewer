@@ -21,7 +21,7 @@ const persister = createSyncStoragePersister({
 
 const persistOptions: OmitKeyof<PersistQueryClientOptions, "queryClient"> = {
   persister,
-  maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
+  maxAge: 1000 * 60 * 60 * 24 * 21, // 21 days
 };
 
 const DANGEROUS_SHARE_CACHE_ALL_USERS = true;
