@@ -16,7 +16,6 @@ export const TsLoaderUi = () => {
       refetchIntervalInBackground: true,
       gcTime: 60 * 60 * 1000, // 1 hour
       staleTime: 15 * 1000,
-      placeholderData: [] as ClientEntry[],
       select: (clients) => clients.filter((cl) => cl.type !== 0),
     }),
   );
