@@ -26,7 +26,7 @@
       "devDependencies": {
         "@biomejs/biome": "1.9.4",
         "@tailwindcss/postcss": "4.1.7",
-        "@types/node": "22.15.21",
+        "@types/node": "22.15.23",
         "@types/react": "19.1.5",
         "@types/react-dom": "19.1.5",
         "postcss": "8.5.3",
@@ -200,7 +200,7 @@
 
     "@trpc/tanstack-react-query": ["@trpc/tanstack-react-query@11.1.2", "", { "peerDependencies": { "@tanstack/react-query": "^5.67.1", "@trpc/client": "11.1.2", "@trpc/server": "11.1.2", "react": ">=18.2.0", "react-dom": ">=18.2.0", "typescript": ">=5.7.2" } }, "sha512-c+NupnmIQmwgwYVTaHgDg59BZBtJ6KxqB0cxF9FBhKHPY6PlwGLdU8+mo25C5VIpofZYEII4H7NKE4yKGFSe3w=="],
 
-    "@types/node": ["@types/node@22.15.21", "", { "dependencies": { "undici-types": "~6.21.0" } }, "sha512-EV/37Td6c+MgKAbkcLG6vqZ2zEYHD7bvSrzqqs2RIhbA6w3x+Dqz8MZM3sP6kGTeLrdoOgKZe+Xja7tUB2DNkQ=="],
+    "@types/node": ["@types/node@22.15.23", "", { "dependencies": { "undici-types": "~6.21.0" } }, "sha512-7Ec1zaFPF4RJ0eXu1YT/xgiebqwqoJz8rYPDi/O2BcZ++Wpt0Kq9cl0eg6NN6bYbPnR67ZLo7St5Q3UK0SnARw=="],
 
     "@types/react": ["@types/react@19.1.5", "", { "dependencies": { "csstype": "^3.0.2" } }, "sha512-piErsCVVbpMMT2r7wbawdZsq4xMvIAhQuac2gedQHysu1TZYEigE6pnFfgZT+/jQnrRuF5r+SHzuehFjfRjr4g=="],
 
