@@ -9,11 +9,11 @@
         "@tanstack/react-query": "5.80.5",
         "@tanstack/react-query-devtools": "5.80.5",
         "@tanstack/react-query-persist-client": "5.80.5",
-        "@trpc/client": "11.1.4",
-        "@trpc/next": "11.1.4",
-        "@trpc/react-query": "11.1.4",
-        "@trpc/server": "11.1.4",
-        "@trpc/tanstack-react-query": "11.1.4",
+        "@trpc/client": "11.3.0",
+        "@trpc/next": "11.3.0",
+        "@trpc/react-query": "11.3.0",
+        "@trpc/server": "11.3.0",
+        "@trpc/tanstack-react-query": "11.3.0",
         "next": "15.3.3",
         "p-queue": "8.1.0",
         "react": "19.1.0",
@@ -190,15 +190,15 @@
 
     "@tanstack/react-query-persist-client": ["@tanstack/react-query-persist-client@5.80.5", "", { "dependencies": { "@tanstack/query-persist-client-core": "5.80.5" }, "peerDependencies": { "@tanstack/react-query": "^5.80.5", "react": "^18 || ^19" } }, "sha512-MiPOgsTKhick2CEkIGMD9RjnEEQHmlPg4qLR0KyjA5HKfEEy8zxFifiveHM60+va+RI/uw/g+YRhDq9r4BtXwg=="],
 
-    "@trpc/client": ["@trpc/client@11.1.4", "", { "peerDependencies": { "@trpc/server": "11.1.4", "typescript": ">=5.7.2" } }, "sha512-QDaIdwhZlHKMhDAr5m4dJNAYkX4ydo63Up0M01mGcdpnOOmGlvGMRWzdVSLIvGc1JasPSvC15RsgrjMzXpElzw=="],
+    "@trpc/client": ["@trpc/client@11.3.0", "", { "peerDependencies": { "@trpc/server": "11.3.0", "typescript": ">=5.7.2" } }, "sha512-O8fih4Tj+mGqN7bPM1inXJ7/3SFYI3/0D/AKYDc/G6Bq7GNNX+1st0YMMdtFk+Vv3e8K95h6233ZOwRX0qiwOg=="],
 
-    "@trpc/next": ["@trpc/next@11.1.4", "", { "peerDependencies": { "@tanstack/react-query": "^5.59.15", "@trpc/client": "11.1.4", "@trpc/react-query": "11.1.4", "@trpc/server": "11.1.4", "next": "*", "react": ">=16.8.0", "react-dom": ">=16.8.0", "typescript": ">=5.7.2" }, "optionalPeers": ["@tanstack/react-query", "@trpc/react-query"] }, "sha512-ndNsIBh6sPYfq4i+AAHCoeGpqcH9bZOveK8IfbUMnz3HFtZ9Hh6o5TxDxr/W/GtTsExQbJNlVM+ytcIwX2m+UA=="],
+    "@trpc/next": ["@trpc/next@11.3.0", "", { "peerDependencies": { "@tanstack/react-query": "^5.59.15", "@trpc/client": "11.3.0", "@trpc/react-query": "11.3.0", "@trpc/server": "11.3.0", "next": "*", "react": ">=16.8.0", "react-dom": ">=16.8.0", "typescript": ">=5.7.2" }, "optionalPeers": ["@tanstack/react-query", "@trpc/react-query"] }, "sha512-utpUjUUaP0MR57EBF/QOv4Xriozc/rB671lfCeriaw3MuHGvZgA4czu11UAO++9tkY/wudqvpR60r8UQHDv1ag=="],
 
-    "@trpc/react-query": ["@trpc/react-query@11.1.4", "", { "peerDependencies": { "@tanstack/react-query": "^5.67.1", "@trpc/client": "11.1.4", "@trpc/server": "11.1.4", "react": ">=18.2.0", "react-dom": ">=18.2.0", "typescript": ">=5.7.2" } }, "sha512-vMwE3Jif7rJcrqWsQ1aKn43xpmwastYPPftMM5CgdcmF9IuvigH/NTLdWRfSzKtbXmNE6wLI45gU1R77uF86yA=="],
+    "@trpc/react-query": ["@trpc/react-query@11.3.0", "", { "peerDependencies": { "@tanstack/react-query": "^5.80.3", "@trpc/client": "11.3.0", "@trpc/server": "11.3.0", "react": ">=18.2.0", "react-dom": ">=18.2.0", "typescript": ">=5.7.2" } }, "sha512-tvYL0OEQU03gLfMeciEOdrbQgaQwAvNg0Y3kgvG2fUo8aTSvthV/6SqfImtQ+onDr8zVJWHprOCE3KsnsdPIVg=="],
 
-    "@trpc/server": ["@trpc/server@11.1.4", "", { "peerDependencies": { "typescript": ">=5.7.2" } }, "sha512-X3TSLwQQh5+zi+yY7BnnmUUwVNdeBj3BAt580sAJ+Qd5PvDhz1gSNHGOAlOLulCFn6g/JHf8n+DbnPF/Gb63SA=="],
+    "@trpc/server": ["@trpc/server@11.3.0", "", { "peerDependencies": { "typescript": ">=5.7.2" } }, "sha512-E5y94QLxgYr+T5FOWiMqNrCW0d2CJfhxNB7bS9xQzPfPMQeo4dpX8/s3nAxITJ9ARrORhK3Efpqs3/bPI9UOTQ=="],
 
-    "@trpc/tanstack-react-query": ["@trpc/tanstack-react-query@11.1.4", "", { "peerDependencies": { "@tanstack/react-query": "^5.67.1", "@trpc/client": "11.1.4", "@trpc/server": "11.1.4", "react": ">=18.2.0", "react-dom": ">=18.2.0", "typescript": ">=5.7.2" } }, "sha512-q4BE8Qi8qq+2Z1lzjR39+33NwphBXd0t/zeayTlgl/OUmHmmZ/v3DcOqLfL1GcNl/Jc+qE/9lc6U/WDoaMyXyw=="],
+    "@trpc/tanstack-react-query": ["@trpc/tanstack-react-query@11.3.0", "", { "peerDependencies": { "@tanstack/react-query": "^5.80.3", "@trpc/client": "11.3.0", "@trpc/server": "11.3.0", "react": ">=18.2.0", "react-dom": ">=18.2.0", "typescript": ">=5.7.2" } }, "sha512-mFS28ZTEkaisnG4gl4PrkbBurWzGHBxJTwPtfHNd0AIc/Gb+VRhpi5NioZY1pOGuqHMP/2lZQCSAX/AfeNtFjQ=="],
 
     "@types/node": ["@types/node@22.15.29", "", { "dependencies": { "undici-types": "~6.21.0" } }, "sha512-LNdjOkUDlU1RZb8e1kOIUpN1qQUlzGkEtbVNo53vbrwDg5om6oduhm4SiUaPW5ASTXhAiP0jInWG8Qx9fVlOeQ=="],
 
