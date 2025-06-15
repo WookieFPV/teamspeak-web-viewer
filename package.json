@@ -35,12 +35,12 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@tailwindcss/postcss": "4.1.8",
+    "@tailwindcss/postcss": "4.1.10",
     "@types/node": "22.15.31",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "postcss": "8.5.5",
-    "tailwindcss": "4.1.8",
+    "tailwindcss": "4.1.10",
     "typescript": "5.8.3"
   },
   "ct3aMetadata": {
