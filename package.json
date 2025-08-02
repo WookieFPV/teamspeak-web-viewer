@@ -26,8 +26,8 @@
     "@trpc/tanstack-react-query": "11.4.3",
     "next": "15.4.5",
     "p-queue": "8.1.0",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
     "superjson": "2.2.2",
     "ts3-nodejs-library": "3.5.1",
     "usehooks-ts": "3.1.1",
@@ -37,8 +37,8 @@
     "@biomejs/biome": "1.9.4",
     "@tailwindcss/postcss": "4.1.11",
     "@types/node": "22.16.5",
-    "@types/react": "19.1.8",
-    "@types/react-dom": "19.1.6",
+    "@types/react": "19.1.9",
+    "@types/react-dom": "19.1.7",
     "postcss": "8.5.6",
     "tailwindcss": "4.1.11",
     "typescript": "5.8.3"
@@ -47,7 +47,7 @@
     "initVersion": "7.26.0"
   },
   "overrides": {
-    "@types/react": "19.1.8",
-    "@types/react-dom": "19.1.6"
+    "@types/react": "19.1.9",
+    "@types/react-dom": "19.1.7"
   }
 }
