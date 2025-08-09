@@ -41,7 +41,7 @@
     "@types/react-dom": "19.1.7",
     "postcss": "8.5.6",
     "tailwindcss": "4.1.11",
-    "typescript": "5.8.3"
+    "typescript": "5.9.2"
   },
   "ct3aMetadata": {
     "initVersion": "7.26.0"
