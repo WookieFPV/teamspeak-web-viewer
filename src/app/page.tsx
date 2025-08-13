@@ -1,5 +1,5 @@
 import { TsLoaderUi } from "~/app/_components/TeamspeakUi";
-import { HydrateClient, api } from "~/trpc/server";
+import { HydrateClient } from "~/trpc/server";
 
 export default async function Home() {
   // void api.ts3.clients.prefetch();

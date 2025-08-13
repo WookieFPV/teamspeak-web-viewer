@@ -19,7 +19,7 @@ export const tsConnect = async () => {
     //an error occurred during connecting
     throw e;
   });
-  ts.on("close", async (error): Promise<void> => {
+  ts.on("close", async (_error): Promise<void> => {
     console.log("disconnected, trying to reconnect...");
     await ts.reconnect(-1, 3000);
     console.log("reconnected!");
