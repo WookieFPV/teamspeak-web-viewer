@@ -1,16 +1,15 @@
 "use client";
 
+import type { OmitKeyof } from "@tanstack/query-core";
+import type { PersistQueryClientOptions } from "@tanstack/query-persist-client-core";
+import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
 import type { QueryClient } from "@tanstack/react-query";
+import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import { httpBatchStreamLink, loggerLink } from "@trpc/client";
 import { createTRPCReact } from "@trpc/react-query";
 import type { inferRouterInputs, inferRouterOutputs } from "@trpc/server";
 import { useState } from "react";
 import SuperJSON from "superjson";
-
-import type { OmitKeyof } from "@tanstack/query-core";
-import type { PersistQueryClientOptions } from "@tanstack/query-persist-client-core";
-import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
-import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import type { AppRouter } from "~/server/api/root";
 import { TRPCProvider } from "~/utils/trpc";
 import { createQueryClient } from "./query-client";
@@ -26,7 +25,7 @@ const persistOptions: OmitKeyof<PersistQueryClientOptions, "queryClient"> = {
 
 const DANGEROUS_SHARE_CACHE_ALL_USERS = true;
 
-let clientQueryClientSingleton: QueryClient | undefined = undefined;
+let clientQueryClientSingleton: QueryClient | undefined;
 const getQueryClient = () => {
   if (typeof window === "undefined" && !DANGEROUS_SHARE_CACHE_ALL_USERS) {
     // Server: always make a new query client

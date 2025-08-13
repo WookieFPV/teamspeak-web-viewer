@@ -1,6 +1,5 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
-import type { ClientEntry } from "ts3-nodejs-library/lib/types/ResponseTypes";
 import { LastDataView } from "~/app/_components/lastDataView";
 import { TeamspeakUi } from "~/app/_components/tsComponents";
 import { useRefetchInterval } from "~/app/useRefetchInterval";
