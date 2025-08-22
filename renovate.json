@@ -26,5 +26,11 @@
   "vulnerabilityAlerts": {
     "labels": ["security"],
     "automerge": false
-  }
+  },
+  "packageGroups": [
+    {
+      "groupName": "tanstack",
+      "packages": ["@tanstack/*"]
+    }
+  ]
 }
