@@ -11,6 +11,10 @@
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
+    },
+    {
+      "groupName": "tanstack",
+      "matchPackageNames": ["@tanstack/**"]
     }
   ],
   "schedule": ["every weekend"],
@@ -26,11 +30,5 @@
   "vulnerabilityAlerts": {
     "labels": ["security"],
     "automerge": false
-  },
-  "packageGroups": [
-    {
-      "groupName": "tanstack",
-      "packages": ["@tanstack/*"]
-    }
-  ]
+  }
 }
