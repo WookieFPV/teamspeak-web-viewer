@@ -8,7 +8,7 @@ Requires [bun](https://bun.sh).
 
 ```bash
 bun install
-bash scripts/dev-ts3.sh up   # start a local TeamSpeak 3 server on 127.0.0.1
+bun run ts3:up   # start a local TeamSpeak 3 server on 127.0.0.1
 bun run dev
 ```
 
@@ -20,10 +20,10 @@ local development, and CI only needs placeholder values.
 
 | Command | Description |
 | --- | --- |
-| `bash scripts/dev-ts3.sh up` | start the server (downloads on first run) |
-| `bash scripts/dev-ts3.sh down` | stop the server |
-| `bash scripts/dev-ts3.sh status` | show whether the server is running |
-| `bash scripts/dev-ts3.sh reset` | stop the server and delete all its data |
+| `bun run ts3:up` | start the server (downloads on first run) |
+| `bun run ts3:down` | stop the server |
+| `bun run ts3:status` | show whether the server is running |
+| `bun run ts3:reset` | stop the server and delete all its data |
 
 The app only talks to the ServerQuery port (10011). The admin privilege
 key for the TeamSpeak client is printed on the server's first start and
