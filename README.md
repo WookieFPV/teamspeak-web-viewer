@@ -14,9 +14,12 @@ bun run dev
 
 `scripts/dev-ts3.sh` downloads a sandboxed TeamSpeak 3 server (free 32-slot
 license) into `.ts3/` (gitignored) on first run, starts it and writes the
-query credentials to `.env.local`, which `bun run dev` picks up
-automatically. No real TeamSpeak server or credentials are needed for
+query credentials to `.env.local`, which `bun run dev` and the tests pick
+up automatically. No real TeamSpeak server or credentials are needed for
 local development, and CI only needs placeholder values.
+
+`bun run test` runs integration tests against the local server; the test
+suite starts it on its own if it is not running yet.
 
 | Command | Description |
 | --- | --- |
@@ -24,6 +27,7 @@ local development, and CI only needs placeholder values.
 | `bun run ts3:down` | stop the server |
 | `bun run ts3:status` | show whether the server is running |
 | `bun run ts3:reset` | stop the server and delete all its data |
+| `bun run test` | run integration tests (starts the server if needed) |
 
 The app only talks to the ServerQuery port (10011). The admin privilege
 key for the TeamSpeak client is printed on the server's first start and

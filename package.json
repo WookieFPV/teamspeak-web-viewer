@@ -8,6 +8,7 @@
     "dev": "next dev --turbo",
     "preview": "next build && next start",
     "lint": "biome check .",
+    "test": "bun test",
     "ts3:up": "bash scripts/dev-ts3.sh up",
     "ts3:down": "bash scripts/dev-ts3.sh down",
     "ts3:status": "bash scripts/dev-ts3.sh status",
@@ -40,6 +41,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.5.12",
     "@tailwindcss/postcss": "4.3.3",
+    "@types/bun": "^1.4.1",
     "@types/node": "^24.3.0",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.7",
