@@ -36,6 +36,9 @@ yarn-error.log*
 .env
 .env*.local
 
+# local TeamSpeak 3 server (scripts/dev-ts3.sh)
+.ts3/
+
 # vercel
 .vercel
 
