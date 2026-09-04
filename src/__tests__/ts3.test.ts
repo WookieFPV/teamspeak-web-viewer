@@ -43,8 +43,9 @@ beforeAll(async () => {
     "TS3_USER_CID",
   ]) {
     const value = env(key);
-    if (value && !process.env[key]) process.env[key] = value;
+    if (value) process.env[key] = value;
   }
+  process.env.TS3_HOST = HOST;
 
   const start = Bun.spawn(["bash", "scripts/dev-ts3.sh", "up"], {
     stdout: "ignore",
