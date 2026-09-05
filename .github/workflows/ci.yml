@@ -19,7 +19,7 @@ jobs:
       TS3_USERNAME: ${{ secrets.TS3_USERNAME || 'serveradmin' }}
 
     steps:
-      - uses: actions/checkout@v5.1.0
+      - uses: actions/checkout@v7.0.1
 
       - name: Set up Bun
         uses: oven-sh/setup-bun@v2.2.0
