@@ -36,13 +36,13 @@
     "superjson": "2.2.6",
     "ts3-nodejs-library": "3.5.3",
     "usehooks-ts": "3.1.1",
-    "zod": "^4.5.4"
+    "zod": "4.5.4"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.12",
     "@tailwindcss/postcss": "4.3.3",
-    "@types/bun": "^1.4.1",
-    "@types/node": "^24.3.0",
+    "@types/bun": "1.4.1",
+    "@types/node": "24.13.3",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.7",
     "postcss": "8.5.28",
@@ -55,8 +55,8 @@
   "overrides": {
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
-    "tar": "^7.5.7",
-    "sharp": "^0.35.0",
-    "postcss": "^8.5.10"
+    "tar": "7.5.22",
+    "sharp": "0.35.4",
+    "postcss": "8.5.28"
   }
 }
