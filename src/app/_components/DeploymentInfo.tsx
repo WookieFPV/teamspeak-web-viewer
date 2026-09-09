@@ -5,15 +5,16 @@ import { useEffect, useState } from "react";
 export const DeploymentInfo = () => {
   const [show, setShow] = useState(false);
 
-  const commit = (typeof window !== "undefined"
-    ? (window as any).__NEXT_PUBLIC_DEPLOY_COMMIT
-    : "") as string;
-  const message = (typeof window !== "undefined"
-    ? (window as any).__NEXT_PUBLIC_DEPLOY_MESSAGE
-    : "") as string;
-  const date = (typeof window !== "undefined"
-    ? (window as any).__NEXT_PUBLIC_DEPLOY_DATE
-    : "") as string;
+  const getDeployInfo = (key: string): string => {
+    if (typeof window === "undefined") return "";
+    // @ts-expect-error - window properties accessed dynamically
+    const value = window[`__NEXT_PUBLIC_DEPLOY_${key}`] as string | undefined;
+    return value || "";
+  };
+
+  const commit = getDeployInfo("COMMIT");
+  const message = getDeployInfo("MESSAGE");
+  const date = getDeployInfo("DATE");
 
   useEffect(() => {
     const stored = localStorage.getItem("deploymentInfoShow");
