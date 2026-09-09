@@ -15,12 +15,26 @@ COMMIT_MSG=$(git log -1 --format=%s 2>/dev/null || echo "unknown")
 # Get deployment date (ISO format)
 DEPLOY_DATE=$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || echo "unknown")
 
-# Write to .env.local (which Next.js picks up)
+# Ensure .next directory exists for Next.js env loading
+mkdir -p .next
+
+# Write deployment info to .next directory (Next.js reads .env files from .next at build time)
 cat > .next/deploy-info.env <<EOF
 NEXT_PUBLIC_DEPLOY_COMMIT="${COMMIT_FULL}"
 NEXT_PUBLIC_DEPLOY_MESSAGE="${COMMIT_MSG}"
 NEXT_PUBLIC_DEPLOY_DATE="${DEPLOY_DATE}"
 EOF
+
+# Also append to .env.local so dev mode has the info too (if not already present)
+if ! grep -q '^NEXT_PUBLIC_DEPLOY_COMMIT=' .env.local 2>/dev/null; then
+  cat >> .env.local <<EOF
+
+# Auto-injected deployment info
+NEXT_PUBLIC_DEPLOY_COMMIT="${COMMIT_FULL}"
+NEXT_PUBLIC_DEPLOY_MESSAGE="${COMMIT_MSG}"
+NEXT_PUBLIC_DEPLOY_DATE="${DEPLOY_DATE}"
+EOF
+fi
 
 echo "Deployment info injected:"
 echo "  Commit: ${COMMIT_SHORT}"
