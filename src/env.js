@@ -21,7 +21,9 @@ export const env = createEnv({
    * `NEXT_PUBLIC_`.
    */
   client: {
-    // NEXT_PUBLIC_CLIENTVAR: z.string(),
+    NEXT_PUBLIC_DEPLOY_COMMIT: z.string().optional(),
+    NEXT_PUBLIC_DEPLOY_MESSAGE: z.string().optional(),
+    NEXT_PUBLIC_DEPLOY_DATE: z.string().optional(),
   },
 
   /**
@@ -35,6 +37,9 @@ export const env = createEnv({
     TS3_NICKNAME: process.env.TS3_NICKNAME,
     TS3_USERNAME: process.env.TS3_USERNAME,
     TS3_USER_CID: process.env.TS3_USER_CID,
+    NEXT_PUBLIC_DEPLOY_COMMIT: process.env.NEXT_PUBLIC_DEPLOY_COMMIT,
+    NEXT_PUBLIC_DEPLOY_MESSAGE: process.env.NEXT_PUBLIC_DEPLOY_MESSAGE,
+    NEXT_PUBLIC_DEPLOY_DATE: process.env.NEXT_PUBLIC_DEPLOY_DATE,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
