@@ -5,16 +5,10 @@ import { useEffect, useState } from "react";
 export const DeploymentInfo = () => {
   const [show, setShow] = useState(false);
 
-  const getDeployInfo = (key: string): string => {
-    if (typeof window === "undefined") return "";
-    // @ts-expect-error - window properties accessed dynamically
-    const value = window[`__NEXT_PUBLIC_DEPLOY_${key}`] as string | undefined;
-    return value || "";
-  };
-
-  const commit = getDeployInfo("COMMIT");
-  const message = getDeployInfo("MESSAGE");
-  const date = getDeployInfo("DATE");
+  // NEXT_PUBLIC_* vars are inlined by Next.js at build time.
+  const commit = process.env.NEXT_PUBLIC_DEPLOY_COMMIT || "";
+  const message = process.env.NEXT_PUBLIC_DEPLOY_MESSAGE || "";
+  const date = process.env.NEXT_PUBLIC_DEPLOY_DATE || "";
 
   useEffect(() => {
     const stored = localStorage.getItem("deploymentInfoShow");
