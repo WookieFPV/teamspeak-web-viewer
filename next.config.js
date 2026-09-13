@@ -5,6 +5,10 @@
 import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  // ssh2 (via ts3-nodejs-library) ships native bindings that Turbopack
+  // can't bundle into ESM chunks — keep it as a real require() at runtime.
+  serverExternalPackages: ["ssh2"],
+};
 
 export default config;
