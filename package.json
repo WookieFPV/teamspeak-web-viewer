@@ -29,7 +29,7 @@
     "@trpc/react-query": "11.19.0",
     "@trpc/server": "11.19.0",
     "@trpc/tanstack-react-query": "11.19.0",
-    "next": "16.3.8",
+    "next": "16.4.1",
     "p-queue": "9.3.5",
     "react": "19.3.1",
     "react-dom": "19.3.1",
