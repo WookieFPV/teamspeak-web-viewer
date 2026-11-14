@@ -41,7 +41,7 @@
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "postcss": "8.5.32",
-    "seroval": "1.7.10",
+    "seroval": "1.8.1",
     "seroval-plugins": "1.7.8",
     "sharp": "0.35.5",
     "tar": "7.5.22",
@@ -395,7 +395,7 @@
 
     "semver": ["semver@7.8.5", "", { "bin": { "semver": "bin/semver.js" } }, "sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA=="],
 
-    "seroval": ["seroval@1.7.10", "", {}, "sha512-6Ya73+E5T7ToU9AJQSAvEt+WsLYfc7jM9C93KVcUGM14REPU9/eLn6Ho6fqBb+QkpjSQMPewWBzxI80WiNl7Mg=="],
+    "seroval": ["seroval@1.8.1", "", {}, "sha512-7z9x1flFYfZBz+LfDkXNfm5UIhZJ/97ASaV8Q1wctoVkeqVfv+tLPsWebeMXBNw6XprvwxDE5wC5Ylqmr+iSrA=="],
 
     "seroval-plugins": ["seroval-plugins@1.7.8", "", { "peerDependencies": { "seroval": "^1.0" } }, "sha512-SCfCNzJ8CEz3spf1jNd6XE7mrtrKMchVRMGLFNUEXjY0wIUhKl1bXhkNG3/i0X8uLCWLOhUdMjcM286JZqnCbg=="],
 
